@@ -171,3 +171,14 @@ const count = book.reviews.librarything.reviewsCount ?? "no data"
 
 // only return the second value when the first value is null or undefined
 
+// Optional Chaining 
+
+function getTotalReviewCount (book) {
+  const goodreads = book.reviews.goodreads.reviewsCount;
+
+  // This ? is Optional Chaining, program only continues in case when left side is not undefined or not null
+  const librarything = book.reviews.librarything?.reviewsCount ?? 0;
+  return goodreads + librarything
+}
+
+console.log(getTotalReviewCount(book))
