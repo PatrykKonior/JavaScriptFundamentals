@@ -165,3 +165,9 @@ const newGenres = [...genres, 'epic fantasy']
 
 const updatedBook = {...book, moviePublicationDate: '2001-12-19', pages: 1210}
 
+// ?? Operator
+
+const count = book.reviews.librarything.reviewsCount ?? "no data"
+
+// only return the second value when the first value is null or undefined
+
