@@ -196,3 +196,9 @@ const essentialData = books.map((book) => ({
   title: book.title,
   author: book.author,
 }))
+
+// Filter Method
+
+const longBooks = books.filter((book) => book.pages > 500).filter((book) => book.hasMovieAdaptation);
+
+const adventureBooks = books.filter((books) => books.genres.includes("adventure")).map((book) => book.title)
