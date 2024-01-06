@@ -207,3 +207,10 @@ const adventureBooks = books.filter((books) => books.genres.includes("adventure"
 
 const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
 
+//Sort Method
+// In sort method is very important to use slice(), because otherwise oryginal array will be replaced 
+
+const arr = [3, 7, 1, 9, 6]
+const sorted = arr.slice().sort((a, b) => a -  b);
+
+const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
