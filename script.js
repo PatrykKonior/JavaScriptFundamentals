@@ -214,3 +214,24 @@ const arr = [3, 7, 1, 9, 6]
 const sorted = arr.slice().sort((a, b) => a -  b);
 
 const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
+
+// Immutable Arrays
+
+// Add book object to array
+
+const newBook = {
+  id: 6,
+  title: "Patryk Konior Document",
+  author: "Patryk Konior"
+};
+
+const booksAfterAdd = [...books, newBook];
+
+// Delete book object from array
+
+const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
+
+// Update book object in the array
+// To update array, i should use map method
+
+const booksAfterUpdate = booksAfterDelete.map((book) => book.id === 1 ? {...book, pages: 1210} : book)
